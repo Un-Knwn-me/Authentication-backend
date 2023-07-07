@@ -75,7 +75,7 @@ router.post('/forgot-password', async (req, res)=>{
         to: user.email,
         subject: "password reset request",
         text: `To reset your password, Kindly click on the following link reset your password:
-             ${fe_url}/reset-password/${token}
+             ${fe_url}/reset-password/${user.id}/${token}
          Kindly ignore the mail if you have not requested a password reset.`
     }
 
